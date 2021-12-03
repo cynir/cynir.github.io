@@ -123,7 +123,9 @@ function draw() {
     image(meteor3, meteor3xpos, meteor3ypos, rad * 1.7, rad * 1.7);
     image(meteor4, meteor4xpos, meteor4ypos, rad * 1.5, rad * 1.5);
     // affix orb to mouse xpos
-    orbxpos = mouseX;
+    if (mouseX > 0 && mouseX < 400) {
+        orbxpos = mouseX;
+    }
     // start moving meteors
     meteor1ypos = meteor1ypos + 4.3;
     meteor2ypos = meteor2ypos + 4.8;
@@ -132,13 +134,6 @@ function draw() {
     if (frames == 60 && gameover === false) {
         score = score + 1;
         frames = 0;
-    }
-    // edge detection
-    if (orbxpos > 400 - 15) {
-        orbxpos = orbxpos - 5;
-    }
-    if (orbxpos < 0 + 15) {
-        orbxpos = orbxpos + 5;
     }
     // meteor randomizer
     if (meteor1ypos > 405) {
@@ -226,8 +221,6 @@ function draw() {
         player.pause()
     }
 }
-
-
 
 function start() {
     startGame = true;

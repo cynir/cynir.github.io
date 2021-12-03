@@ -1,0 +1,14 @@
+*.unselectable {
+    user-select: none;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
