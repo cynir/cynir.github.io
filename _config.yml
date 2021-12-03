@@ -1,0 +1,4 @@
+remote_theme: pages-themes/tactile@v0.2.0
+plugins:
+title: cynir's Github Site
+description: My personal site for my projects.
